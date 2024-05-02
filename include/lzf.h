@@ -46,6 +46,11 @@
 **
 ***********************************************************************/
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 /* API version (major * 256 + minor)
  * major API version gets bumped on incompatible changes.
  * minor API version gets bumped on compatible changes.
@@ -111,5 +116,9 @@ lzf_compress (const void *const in_data,  unsigned int in_len,
 unsigned int
 lzf_decompress (const void *const in_data,  unsigned int in_len,
                 void             *out_data, unsigned int out_len);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
